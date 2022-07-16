@@ -27,7 +27,7 @@ async function setAvatarFrame() {
     const activity2 = document.getElementById('status2');
 
     if (response.data.discord_status == 'offline') {
-        activity2.innerHTML = "geeking and sleeping";
+        activity2.innerHTML = "might be eternal sleep";
         activity2.style.cssText = 'color: unset; opacity: 0.5;';
     } else {
         activity2.innerHTML = "idle";
