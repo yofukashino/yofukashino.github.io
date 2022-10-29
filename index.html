@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/lanyard.js"></script>
+    <script defer src="js/lanyard.js"></script>
     <link rel="icon" href="./assets/favicon.gif">
     <title>loneweeb</title>
     <meta property="og:title" content="loneweeb">
     <meta property="og:url" content="https://tharki-god.github.io/">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/889198641775001670/985243078526910475/tumblr_nu7ab2SUHA1uewxwpo1_500.gif">
+    <meta property="og:image" content="./assets/ogimage.gif">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#080808">
     <meta property="og:description" content="dead inside">
@@ -22,7 +22,7 @@
             <div class="user-profile">
                 <div class="Profile-pic">
                     <img id="pfp" src="assets/loader.gif" alt="">
-                    <div id="activity-dot" aria-label="Unknown"></div>
+                    <div id="status-dot" aria-label="Unknown"></div>
                 </div>
                 <div class="user-info">
                     <div id="username">Loading...</div>
@@ -40,20 +40,18 @@
                 </div>
             </div>
         </div>
-        <div class="spotify card">
-            <div class="card-title">@loneweeb > spotify</div>
-            <div class="spotify-wrapper">
-                <img id="album-cover" src="" alt="">
-                <div class="spotify-info">
-                    <div id="spotify-song">loading...</div>
-                    <div id="spotify-artist">loading...</div>
-                    <div class="spotify-outerbar">
-                        <div id="spotify-innerbar"></div>
-                    </div>
-                    <div class="spotify-time">
-                        <div id="spotify-time-start"></div>
-                        <div id="spotify-time-end"></div>
-                    </div>
+        <div class="activity card">
+            <div class="card-title">@loneweeb > activity</div>
+            <div class="activity-wrapper">
+			<div class="activity-images">
+<img id="activity-big-image" src="assets/loader.gif" alt="">
+				<img id="activity-small-image" src="assets/loader.gif" alt="">
+</div>
+                
+                <div class="activity-info">
+				<div id="activity-name">loading...</div>
+                    <div id="activity-state">loading...</div>
+                    <div id="activity-detail">loading...</div>
                 </div>
             </div>
         </div>
@@ -63,7 +61,7 @@
                 <header class="heading">about me</header>
                 <div class="bio">
                     <ul>
-					<li>ϡ 16 years old</li>
+					<li>ϡ 17 years old</li>
 					<li>ϡ straight male</li>
 					<li>ϡ looking for my soulmate</li>
 					<li>ϡ indian</li>                        

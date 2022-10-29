@@ -34,11 +34,11 @@ a {
 
 .card {
     background: rgba(60, 59, 59, 0.6);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.369);
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.369);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.212);
     padding: 12px;
     width: 50%;
 }
@@ -65,7 +65,7 @@ a {
     height: 128px;
     border-radius: 10%;
 }
-#activity-dot {
+#status-dot {
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -89,55 +89,53 @@ a {
 
 /* \ Profile / */
 
-/* / Spotify \ */
+/* / Activity \ */
 
-.spotify-wrapper {
+.activity-wrapper {
     display: flex;
     gap: 8px;
     width: 100%;
 }
 
-.spotify-info {
+.activity-info {
     width: 100%;
 }
 
-#album-cover {
+.activity-images {
+    position: relative;
+}
+
+
+#activity-big-image {
     width: 128px;
     height: 128px;
     border-radius: 10%;
 }
-
-#spotify-song {
-    font-size: 24px;
+#activity-small-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+   bottom: -20%;
+    right: 0px;
+    transform: translate(50%, -50%);
+    border: 2px solid rgba(60, 59, 59, 0.3);
+}
+#activity-name {
+    font-size: 25px;
     font-weight: bold;
 }
 
-#spotify-artist {
+#activity-state {
+    font-size: 20px;
+     opacity: 0.7;
+}
+
+#activity-detail {
     opacity: 0.5;
 }
 
-.spotify-outerbar {
-    margin-top: 5px;
-    width: 100%;
-    height: 6px;
-    border-radius: 150px;
-    background-color: rgb(74, 74, 74);
-}
-
-#spotify-innerbar {
-    height: 6px;
-    border-radius: 150px;
-    background-color: #fff;
-}
-
-.spotify-time {
-    margin-top: 2px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* \ Spotify / */
+/* \ Activity / */
 
 .heading {
     font-size: 45px;
@@ -169,4 +167,5 @@ li {
 }
 .connection-icon {
     height: 28px;
+    width: auto;
 }
