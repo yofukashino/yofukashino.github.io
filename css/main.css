@@ -105,12 +105,12 @@ a {
     position: relative;
 }
 
-
 #activity-big-image {
     width: 128px;
     height: 128px;
     border-radius: 10%;
 }
+
 #activity-small-image {
     border-radius: 50%;
     width: 40px;
@@ -121,6 +121,7 @@ a {
     transform: translate(50%, -50%);
     border: 2px solid rgba(60, 59, 59, 0.3);
 }
+
 #activity-name {
     font-size: 25px;
     font-weight: bold;
