@@ -101,6 +101,7 @@ async function setActivityBigImage() {
             spotify
         }
     } = await fetchResponse(USERID);
+	console.log(await fetchResponse(USERID))
     const mostRecent = activities.filter(m => m.type !== 4).shift();
     if (!mostRecent?.assets?.large_image) {
         bigImage.style.display = 'none';
@@ -109,11 +110,14 @@ async function setActivityBigImage() {
     if (mostRecent.assets.large_image.includes("spotify")) {
         bigImage.style.display = 'block';
         bigImage.src = spotify.album_art_url;
+		bigImage.title =  spotify.album;
+
         return;
     }
     const imageLink = mostRecent.assets.large_image.includes("external") ? `https://media.discordapp.net/external/${mostRecent.assets.large_image.split("mp:external/")[1]}` :  `https://cdn.discordapp.com/app-assets/${mostRecent.application_id}/${mostRecent.assets.large_image}.png`;
     bigImage.style.display = 'block';
     bigImage.src = imageLink;
+	bigImage.title = mostRecent.assets.large_text;
 }
 async function setActivitySmallImage() {
     const {
@@ -129,6 +133,7 @@ async function setActivitySmallImage() {
     const imageLink = mostRecent.assets.small_image.includes("external") ? `https://media.discordapp.net/external/${mostRecent.assets.small_image.split("mp:external/")[1]}` : `https://cdn.discordapp.com/app-assets/${mostRecent.application_id}/${mostRecent.assets.small_image}.png`;
     smallImage.style.display = 'block';
     smallImage.src = imageLink;
+	smallImage.title = mostRecent.assets.small_text;
 }
 async function setActivityName() {
     const {
