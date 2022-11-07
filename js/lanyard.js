@@ -101,7 +101,6 @@ async function setActivityBigImage() {
             spotify
         }
     } = await fetchResponse(USERID);
-	console.log(await fetchResponse(USERID))
     const mostRecent = activities.filter(m => m.type !== 4).shift();
     if (!mostRecent?.assets?.large_image) {
         bigImage.style.display = 'none';
