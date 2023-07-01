@@ -101,17 +101,19 @@ const LanyardProfile: React.FC = () => {
       const currentActivity = activities.find(
         (activity) => activity.type !== 4
       );
-
+      const statusActivity = activities.find(
+        (activity) => activity.type === 4
+      );
       const currentData: ProfileData = {
         avatar: `https://cdn.discordapp.com/avatars/${USERID}/${discord_user.avatar}`,
         discordStatus: discord_status,
         username: `@${discord_user.username}`,
         status:
-          discord_status !== "offline"
-            ? `Status: "${currentActivity?.state || ""}"`
+          discord_status !== "offline" && statusActivity?.state
+            ? `Status: "${statusActivity?.state || ""}"`
             : "",
         activity: {
-          hidden: discord_status === "offline",
+          hidden: discord_status === "offline" || !currentActivity,
           bigImage: currentActivity?.assets?.large_image?.includes("spotify") ? spotify?.album_art_url! :  "",
           bigImageTitle: currentActivity?.assets?.large_image?.includes("spotify") ? spotify?.album : "",
           smallImage: "",
@@ -210,7 +212,75 @@ const LanyardProfile: React.FC = () => {
             <div id="status2">
               {discordStatus !== "offline" ? discordStatus : "unknown"}
             </div>
-            <div className="connections">{/* Connections */}</div>
+            <div className="connections"> <div className="connections">
+              <a title="github" href="https://github.com/Tharki-God">
+                <img
+                  className="connection-icon"
+                  src={assets.connections.github}
+                  alt=""
+                />
+              </a>
+              <a
+                title="loneweeb"
+                href="https://discord.com/users/1025214794766221384/"
+              >
+                <img
+                  className="connection-icon"
+                  src={assets.connections.discord}
+                  alt=""
+                />
+              </a>
+              <a
+                title="support server"
+                href="https://discord.com/invite/SgKSKyh9gY"
+              >
+                <img
+                  className="connection-icon"
+                  src={assets.connections.support}
+                  alt=""
+                />
+              </a>
+              <a
+                title="rp plugins"
+                href="https://github.com/Tharki-God/RepluggedPlugins"
+              >
+                <img
+                  className="connection-icon"
+                  src={assets.connections.plugin}
+                  alt=""
+                />
+              </a>
+              <a
+                title="instagram"
+                href="https://www.instagram.com/tharki_ahlawat/"
+              >
+                <img
+                  className="connection-icon"
+                  src={assets.connections.insta}
+                  alt=""
+                />
+              </a>
+              <a
+                title="youtube"
+                href="https://www.youtube.com/channel/UCYQnV4Z-TOVuyBVWjkBKZtg"
+              >
+                <img
+                  className="connection-icon"
+                  src={assets.connections.youtube}
+                  alt=""
+                />
+              </a>
+              <a
+                title="twitch"
+                href="https://www.twitch.tv/tharki_ahlawat"
+              >
+                <img
+                  className="connection-icon"
+                  src={assets.connections.twitch}
+                  alt=""
+                />
+              </a>
+            </div></div>
           </div>
         </div>
       </div>
