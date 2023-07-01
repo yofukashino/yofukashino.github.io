@@ -2,7 +2,7 @@
   "name": "tharki-god.github.io",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://tharki-god.github.io/tharki-god.github.io",
+  "homepage": "https://tharki-god.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
