@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/tharki-god.github.io/static/css/main.62340047.css",
-    "main.js": "/tharki-god.github.io/static/js/main.bb2ae668.js",
-    "static/media/background.gif": "/tharki-god.github.io/static/media/background.8effb98db446b8959636.gif",
-    "static/media/insta.png": "/tharki-god.github.io/static/media/insta.29524d3f5c7d35435d7d.png",
-    "static/media/loader.gif": "/tharki-god.github.io/static/media/loader.8e6c70225ebd19029c9d.gif",
-    "static/media/support.png": "/tharki-god.github.io/static/media/support.22fbcc1537efad3cc0af.png",
-    "static/media/twitch.png": "/tharki-god.github.io/static/media/twitch.f32ce006addb12ffd9bb.png",
-    "static/media/bot.png": "/tharki-god.github.io/static/media/bot.d7f2fc959b848178ccef.png",
-    "static/media/plugin.png": "/tharki-god.github.io/static/media/plugin.47adca78bdff6a8727da.png",
-    "static/media/youtube.png": "/tharki-god.github.io/static/media/youtube.1fa5273a26b9d68449ed.png",
-    "static/media/github.svg": "/tharki-god.github.io/static/media/github.5fa337708654a2281250c5cfb977cb9b.svg",
-    "static/media/discord.svg": "/tharki-god.github.io/static/media/discord.21d8361b8b93fe828f3dce45a54b6673.svg",
-    "index.html": "/tharki-god.github.io/index.html",
-    "main.62340047.css.map": "/tharki-god.github.io/static/css/main.62340047.css.map",
-    "main.bb2ae668.js.map": "/tharki-god.github.io/static/js/main.bb2ae668.js.map"
+    "main.css": "/static/css/main.02c6b35c.css",
+    "main.js": "/static/js/main.d54b3d0d.js",
+    "static/media/background.gif": "/static/media/background.8effb98db446b8959636.gif",
+    "static/media/insta.png": "/static/media/insta.29524d3f5c7d35435d7d.png",
+    "static/media/loader.gif": "/static/media/loader.8e6c70225ebd19029c9d.gif",
+    "static/media/support.png": "/static/media/support.22fbcc1537efad3cc0af.png",
+    "static/media/twitch.png": "/static/media/twitch.f32ce006addb12ffd9bb.png",
+    "static/media/bot.png": "/static/media/bot.d7f2fc959b848178ccef.png",
+    "static/media/plugin.png": "/static/media/plugin.47adca78bdff6a8727da.png",
+    "static/media/youtube.png": "/static/media/youtube.1fa5273a26b9d68449ed.png",
+    "static/media/github.svg": "/static/media/github.5fa337708654a2281250c5cfb977cb9b.svg",
+    "static/media/discord.svg": "/static/media/discord.21d8361b8b93fe828f3dce45a54b6673.svg",
+    "index.html": "/index.html",
+    "main.02c6b35c.css.map": "/static/css/main.02c6b35c.css.map",
+    "main.d54b3d0d.js.map": "/static/js/main.d54b3d0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.62340047.css",
-    "static/js/main.bb2ae668.js"
+    "static/css/main.02c6b35c.css",
+    "static/js/main.d54b3d0d.js"
   ]
 }
