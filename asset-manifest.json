@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ca3bb3d.css",
-    "main.js": "/static/js/main.7244cc89.js",
+    "main.js": "/static/js/main.390a2f18.js",
     "static/media/background.gif": "/static/media/background.8effb98db446b8959636.gif",
     "static/media/insta.png": "/static/media/insta.29524d3f5c7d35435d7d.png",
     "static/media/loader.gif": "/static/media/loader.8e6c70225ebd19029c9d.gif",
@@ -14,10 +14,10 @@
     "static/media/discord.svg": "/static/media/discord.21d8361b8b93fe828f3dce45a54b6673.svg",
     "index.html": "/index.html",
     "main.8ca3bb3d.css.map": "/static/css/main.8ca3bb3d.css.map",
-    "main.7244cc89.js.map": "/static/js/main.7244cc89.js.map"
+    "main.390a2f18.js.map": "/static/js/main.390a2f18.js.map"
   },
   "entrypoints": [
     "static/css/main.8ca3bb3d.css",
-    "static/js/main.7244cc89.js"
+    "static/js/main.390a2f18.js"
   ]
 }
