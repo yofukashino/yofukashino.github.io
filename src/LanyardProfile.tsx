@@ -212,7 +212,7 @@ const LanyardProfile: React.FC = () => {
             <div id="status2" style={{ color:getStatusStyles().color }}>
               {discordStatus !== "offline" ? discordStatus : "unknown"}
             </div>
-            <div className="connections"> <div className="connections">
+            <div className="connections">
               <a title="github" href="https://github.com/Tharki-God">
                 <img
                   className="connection-icon"
@@ -280,7 +280,7 @@ const LanyardProfile: React.FC = () => {
                   alt=""
                 />
               </a>
-            </div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -307,7 +307,10 @@ const LanyardProfile: React.FC = () => {
               <li>ϡ 17 years old</li>
               <li>ϡ straight male</li>
               <li>ϡ looking for my soulmate</li>
+              <li>ϡ cultured degenrate weeb</li>
               <li>ϡ indian</li>
+              <br/>
+              <li>UPI ID for donations: 7988492002@fam</li>
             </ul>
           </div>
         </div>
