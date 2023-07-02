@@ -110,7 +110,7 @@ const LanyardProfile: React.FC = () => {
         username: `@${discord_user.username}`,
         status:
           discord_status !== "offline" && statusActivity?.state
-            ? `Status: "${statusActivity?.state || ""}"`
+            ? statusActivity?.state || ""
             : "",
         activity: {
           hidden: discord_status === "offline" || !currentActivity,
@@ -209,7 +209,7 @@ const LanyardProfile: React.FC = () => {
           <div className="user-info">
             <div id="username">{username}</div>
             <div id="status">{status}</div>
-            <div id="status2">
+            <div id="status2" style={{ color:getStatusStyles().color }}>
               {discordStatus !== "offline" ? discordStatus : "unknown"}
             </div>
             <div className="connections"> <div className="connections">
