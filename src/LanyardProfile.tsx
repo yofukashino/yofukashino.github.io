@@ -122,20 +122,25 @@ const LanyardProfile: React.FC = () => {
           details: currentActivity?.details || "",
         }
       }
-      if (currentActivity?.assets?.large_image && !currentActivity?.assets?.large_image?.includes("spotify"))
-        currentData.activity.bigImage = currentActivity?.assets?.large_image.includes("external")
+      if (!currentActivity?.assets?.large_image?.includes("spotify")) {
+        if (currentActivity?.assets?.large_image)
+        currentData.activity.bigImage = currentActivity?.assets?.large_image?.includes("external")
           ? `https://media.discordapp.net/external/${currentActivity?.assets?.large_image.split(
             "mp:external/"
           )[1]
           }`
           : `https://cdn.discordapp.com/app-assets/${currentActivity?.application_id}/${currentActivity?.assets?.large_image}.png`;
-      if (currentActivity?.assets?.small_image || !currentActivity?.assets?.large_image?.includes("spotify"))
-        currentData.activity.smallImage = currentActivity?.assets?.small_image?.includes("external")
+
+          if (currentActivity?.assets?.small_image)
+          currentData.activity.smallImage = currentActivity?.assets?.small_image?.includes("external")
           ? `https://media.discordapp.net/external/${currentActivity?.assets?.small_image?.split(
             "mp:external/"
           )[1]
           }`
-          : `https://cdn.discordapp.com/app-assets/${currentActivity?.application_id}/${currentActivity?.assets?.small_image}.png`
+          : `https://cdn.discordapp.com/app-assets/${currentActivity?.application_id}/${currentActivity?.assets?.small_image}.png`;
+
+      }      
+        
       setProfileData((prevData) => ({
         ...prevData,
         ...currentData
