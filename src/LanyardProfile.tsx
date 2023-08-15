@@ -311,7 +311,7 @@ const LanyardProfile: React.FC = () => {
             <ul>
               <li>ϡ 17 years old</li>
               <li>ϡ straight male</li>
-              <li>ϡ looking for my soulmate</li>
+              <li>ϡ commited to the love</li>
               <li>ϡ cultured degenrate weeb</li>
               <li>ϡ indian</li>
               <br/>
