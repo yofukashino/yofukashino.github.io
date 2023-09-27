@@ -61,12 +61,18 @@
     border: 2px solid rgba(60, 59, 59, 0.3);
 }
 
+#display-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
 #username {
     font-size: 28px;
     font-weight: bold;
 }
 
 #status2,
+#username-secondary,
 #status {
     opacity: 0.5;
     transition: all 0.6s ease;

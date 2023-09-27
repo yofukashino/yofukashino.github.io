@@ -12,7 +12,7 @@ interface DiscordUser {
   discriminator: string;
   bot: boolean;
   global_name: string | null;
-  avatar_decoration: null | string; // Update the type accordingly
+  avatar_decoration: null | string;
   display_name: string | null;
   public_flags: number;
 }
@@ -64,6 +64,7 @@ interface ProfileData {
   avatar: string;
   discordStatus: string;
   username: string;
+  displayName: string;
   status: string;
   activity: {
     hidden: boolean;
@@ -80,6 +81,7 @@ const LanyardProfile: React.FC = () => {
   const [profileData, setProfileData] = useState<ProfileData>({
     avatar: assets.loader,
     discordStatus: "",
+    displayName: "",
     username: "",
     status: "",
     activity: {
@@ -108,6 +110,7 @@ const LanyardProfile: React.FC = () => {
         avatar: `https://cdn.discordapp.com/avatars/${USERID}/${discord_user.avatar}`,
         discordStatus: discord_status,
         username: `@${discord_user.username}`,
+        displayName: discord_user.display_name ?? "",
         status:
           discord_status !== "offline" && statusActivity?.state
             ? statusActivity?.state || ""
@@ -196,7 +199,7 @@ const LanyardProfile: React.FC = () => {
     }
   };
 
-  const { avatar, discordStatus, username, status, activity } = profileData;
+  const { avatar, discordStatus, username, status, activity, displayName } = profileData;
 
   return (
     <div className="wrapper">
@@ -212,7 +215,8 @@ const LanyardProfile: React.FC = () => {
             ></div>
           </div>
           <div className="user-info">
-            <div id="username">{username}</div>
+          {displayName ? <><div id="display-name">{displayName}</div>
+            <div id="username-secondary">{username}</div></> : <div id="username">{username}</div>}
             <div id="status">{status}</div>
             <div id="status2" style={{ color:getStatusStyles().color }}>
               {discordStatus !== "offline" ? discordStatus : "unknown"}
@@ -316,6 +320,7 @@ const LanyardProfile: React.FC = () => {
               <li>ϡ indian</li>
               <br/>
               <li>UPI ID for donations: 7988492002@fam</li>
+              <li>Youn can donate on my <a href="https://ko-fi.com/tharki">KO-FI</a> too</li>
             </ul>
           </div>
         </div>
