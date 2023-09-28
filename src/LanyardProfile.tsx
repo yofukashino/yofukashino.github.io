@@ -4,6 +4,7 @@ import "./LanyardProfile.css";
 
 const API_URL = "https://api.lanyard.rest/v1";
 const USERID = "1025214794766221384";
+const DATE_OF_BIRTH = {date:25, month:8, year:2005};
 
 interface DiscordUser {
   id: string;
@@ -66,6 +67,7 @@ interface ProfileData {
   username: string;
   displayName: string;
   status: string;
+  age: number;
   activity: {
     hidden: boolean;
     bigImage?: string;
@@ -84,6 +86,7 @@ const LanyardProfile: React.FC = () => {
     displayName: "",
     username: "",
     status: "",
+    age: 0,
     activity: {
       hidden: true,
       bigImage: "",
@@ -93,7 +96,13 @@ const LanyardProfile: React.FC = () => {
       details: "",
     },
   });
-
+  const calculateAge = ({date, month, year}: {date: number, month: number, year: number }): number => { 
+    const dob = new Date(year, month, date)
+    var msDifference = Date.now() - dob.getTime();
+    var ageDate = new Date(msDifference); 
+  
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
   const fetchUserData = async () => {
     try {
       const res = await fetch(`${API_URL}/users/${USERID}`);
@@ -111,6 +120,7 @@ const LanyardProfile: React.FC = () => {
         discordStatus: discord_status,
         username: `@${discord_user.username}`,
         displayName: discord_user.display_name ?? "",
+        age: calculateAge(DATE_OF_BIRTH),
         status:
           discord_status !== "offline" && statusActivity?.state
             ? statusActivity?.state || ""
@@ -161,7 +171,7 @@ const LanyardProfile: React.FC = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  });
 
   const getStatusStyles = () => {
     const { discordStatus } = profileData;
@@ -199,7 +209,7 @@ const LanyardProfile: React.FC = () => {
     }
   };
 
-  const { avatar, discordStatus, username, status, activity, displayName } = profileData;
+  const { avatar, discordStatus, username, status, activity, displayName, age } = profileData;
 
   return (
     <div className="wrapper">
@@ -313,7 +323,7 @@ const LanyardProfile: React.FC = () => {
           <header className="heading">about me</header>
           <div className="bio">
             <ul>
-              <li>ϡ 17 years old</li>
+              <li>ϡ {age} years old</li>
               <li>ϡ straight male</li>
               <li>ϡ commited to the love</li>
               <li>ϡ cultured degenrate weeb</li>
