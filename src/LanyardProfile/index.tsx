@@ -7,8 +7,9 @@ import Activity from "./Components/Activity";
 import AboutMe from "./Components/AboutMe";
 import { LanyardData, ProfileData } from "./Types";
 import "./LanyardProfile.css";
+import Loading from "./Components/Loading";
 
-export default  React.memo(() => {
+export default React.memo(() => {
   const [state, setStatus] = React.useState<LanyardData>();
   const [loading, setLoading] = React.useState<boolean>(true);
 
@@ -50,7 +51,7 @@ export default  React.memo(() => {
         };
         if (t === "INIT_STATE" || t === "PRESENCE_UPDATE") {
           setStatus(d || ({} as LanyardData));
-          if (loading) setLoading(false);
+          if (loading && Object.keys(d).length !== 0) setLoading(false);
         }
       });
 
@@ -85,17 +86,17 @@ export default  React.memo(() => {
 
   React.useEffect(() => {
     try {
-      const { discord_user, discord_status, activities, spotify } = state!;
+      const { discord_user, discord_status, activities, spotify } = state! ?? {};
 
-      const currentActivity = activities.find((activity) => activity.type !== 4);
+      const currentActivity = activities?.find((activity) => activity.type !== 4);
 
-      const statusActivity = activities.find((activity) => activity.type === 4);
+      const statusActivity = activities?.find((activity) => activity.type === 4);
 
       const currentData: ProfileData = {
-        avatar: `https://cdn.discordapp.com/avatars/${Constants.USER_ID}/${discord_user.avatar}`,
+        avatar: `https://cdn.discordapp.com/avatars/${Constants.USER_ID}/${discord_user?.avatar}`,
         discordStatus: discord_status,
-        username: `@${discord_user.username}`,
-        displayName: discord_user.display_name ?? "",
+        username: `@${discord_user?.username}`,
+        displayName: discord_user?.display_name ?? "",
         age: Utils.calculateAge(Constants.DATE_OF_BIRTH),
         status:
           discord_status !== "offline" && statusActivity?.state ? statusActivity?.state || "" : "",
@@ -142,11 +143,16 @@ export default  React.memo(() => {
   }, [state, loading]);
 
   return (
-    <div className="wrapper">
-      <UserProfile {...profileData} />
-      <Activity {...profileData} />
-      <AboutMe {...profileData} />
+    <div className="wrapper" key={`${loading}`}>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <UserProfile {...profileData} />
+          <Activity {...profileData} />
+          <AboutMe {...profileData} />
+        </>
+      )}
     </div>
   );
 });
-

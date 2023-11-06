@@ -15,7 +15,7 @@
 
 .card {
   background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 8px 32px 0 rgba(30, 7, 7, 0.369);
+  box-shadow: 0 8px 32px 0 rgba(23, 7, 30, 0.369);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
@@ -46,7 +46,7 @@ li {
 }
 
 a {
-  color: #8c00d7;
+  color: #d11800;
 }
 /* misc */
 

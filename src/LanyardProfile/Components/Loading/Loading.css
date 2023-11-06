@@ -1,0 +1,16 @@
+.loading-wrapper {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+#loading-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 10%;
+}
+
+.loading-header {
+  font-size: 45px;
+  font-weight: bold;
+}
