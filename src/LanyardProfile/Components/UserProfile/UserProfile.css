@@ -1,0 +1,68 @@
+.user-profile {
+  display: flex;
+  gap: 1em;
+}
+
+.profile-pic {
+  position: relative;
+}
+
+#pfp {
+  width: 128px;
+  height: 128px;
+  border-radius: 10%;
+}
+
+#status-dot {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translate(50%, -50%);
+  border: 2px solid rgba(60, 59, 59, 0.3);
+}
+
+#display-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#username {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#status2,
+#username-secondary,
+#status {
+  opacity: 0.5;
+  transition: all 0.6s ease;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #username {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #status2,
+  #status {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #pfp {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* media queries */

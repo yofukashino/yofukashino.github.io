@@ -1,0 +1,11 @@
+.connections {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 5px;
+}
+.connection-icon {
+  height: 28px;
+  width: auto;
+}

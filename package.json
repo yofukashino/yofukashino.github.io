@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "https://tharki-god.github.io",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,11 +13,20 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@types/node": "^18.18.6",
+    "@types/react": "^18.2.31",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.52.0",
+    "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^2.8.8",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
-    "@types/react": "^18.2.14",
     "gh-pages": "^5.0.0"
   },
   "scripts": {
