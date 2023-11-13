@@ -1,9 +1,10 @@
 import background from "./background.gif";
 import loader from "./loader.gif";
+import backgroundAudio from "./background audio";
 import connections from "./connections"
-const assets = {
-    background,
-    loader,
-    connections
+export default {
+  background,
+  loader,
+  backgroundAudio,
+  connections
 };
-export default assets;

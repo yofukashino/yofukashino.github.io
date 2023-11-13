@@ -3,6 +3,7 @@ import Constants from "../constants";
 import assets from "../assets";
 import Utils from "./Utils";
 import UserProfile from "./Components/UserProfile";
+import BackgroundMusic from "./Components/BackgroundMusic";
 import Activity from "./Components/Activity";
 import AboutMe from "./Components/AboutMe";
 import { LanyardData, ProfileData } from "./Types";
@@ -144,6 +145,7 @@ export default React.memo(() => {
 
   return (
     <div className="wrapper" key={`${loading}`}>
+      <BackgroundMusic loading={loading} />
       {loading ? (
         <Loading />
       ) : (

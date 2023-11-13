@@ -6,6 +6,5 @@ import plugin from "./plugin.png";
 import support from "./support.png";
 import twitch from "./twitch.png";
 import youtube from "./youtube.png";
-const connections = {bot, discord, github, insta, plugin, support, twitch, youtube};
 
-export default connections;
+export default {bot, discord, github, insta, plugin, support, twitch, youtube};

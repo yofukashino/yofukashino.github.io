@@ -1,6 +1,6 @@
 export const API_URL = "api.lanyard.rest";
 
-export const HEARTBEAT_INTERVAL = 10_000;
+export const HEARTBEAT_INTERVAL = 30_000;
 
 export const USER_ID = "1025214794766221384";
 
