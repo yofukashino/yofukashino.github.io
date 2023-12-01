@@ -122,7 +122,9 @@ export default React.memo(() => {
             ? `https://media.discordapp.net/external/${
                 currentActivity?.assets?.large_image.split("mp:external/")[1]
               }`
-            : `https://cdn.discordapp.com/app-assets/${currentActivity?.application_id}/${currentActivity?.assets?.large_image}.png`;
+            : currentActivity?.assets?.large_image?.includes("mp:attachments") ? `https://cdn.discordapp.com/attachments/${
+              currentActivity?.assets?.large_image.split("mp:attachments/")[1]
+            }`.replace(/(\w+\/\w+\.\w+)\.\w+/, `$1`) : `https://cdn.discordapp.com/app-assets/${currentActivity?.application_id}/${currentActivity?.assets?.large_image}.png`;
 
         if (currentActivity?.assets?.small_image)
           currentData.activity.smallImage = currentActivity?.assets?.small_image?.includes(
@@ -131,7 +133,9 @@ export default React.memo(() => {
             ? `https://media.discordapp.net/external/${
                 currentActivity?.assets?.small_image?.split("mp:external/")[1]
               }`
-            : `https://cdn.discordapp.com/app-assets/${currentActivity?.application_id}/${currentActivity?.assets?.small_image}.png`;
+            : currentActivity?.assets?.small_image?.includes("mp:attachments") ? `https://cdn.discordapp.com/attachments/${
+              currentActivity?.assets?.small_image.split("mp:attachments/")[1]
+            }`.replace(/(\w+\/\w+\.\w+)\.\w+/, `$1`) :`https://cdn.discordapp.com/app-assets/${currentActivity?.application_id}/${currentActivity?.assets?.small_image}.png`;
       }
 
       setProfileData((prevData) => ({
