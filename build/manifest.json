@@ -1,21 +1,21 @@
 {
-  "short_name": "loneweeb",
-  "name": "loneweeb",
+  "short_name": "yofukashi.no",
+  "name": "yofukashi.no",
   "icons": [
     {
       "src": "assets/favicon.gif",
-      "sizes": "220x220",
+      "sizes": "283x320",
       "type": "image/gif"
     },
     {
       "src": "assets/icon192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "170x192"
     },
     {
       "src": "assets/icon512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "453x512"
     }
   ],
   "start_url": ".",
