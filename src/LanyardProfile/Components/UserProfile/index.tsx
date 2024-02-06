@@ -3,7 +3,7 @@ import Constants from "../../../constants";
 import Utils from "../../Utils";
 import { ProfileData } from "../../Types";
 import "./UserProfile.css";
-export default ({ avatar, discordStatus, displayName, username }: ProfileData) => {
+export default ({ avatar, discordStatus, displayName, username, status }: ProfileData) => {
   return (
     <div className="card">
       <div className="card-title">@{Constants.USER} &gt; home</div>
@@ -12,6 +12,7 @@ export default ({ avatar, discordStatus, displayName, username }: ProfileData) =
           <img id="pfp" src={avatar} alt="" />
           <div
             id="status-dot"
+            data-tooltip={discordStatus}
             aria-label={discordStatus}
             style={Utils.getStatusStyles(discordStatus)}></div>
         </div>

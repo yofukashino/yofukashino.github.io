@@ -1,12 +1,12 @@
 import React from "react";
 import Assets from "../../../assets";
 import "./BackgroundMusic.css";
-export default React.memo(({ loading }: { loading: boolean }): React.ReactElement => {
+export default React.memo(({ loading, containerRef }: { loading: boolean, containerRef: React.RefObject<{ addEventListener: (event: string, callback: () => void) => void; removeEventListener: (event: string, callback: () => void) => void;  }> }): React.ReactElement => {
   const [audio, setAudio] = React.useState<HTMLAudioElement | undefined>();
   const [isPlaying, setPlaying] = React.useState<boolean>(false);
   React.useEffect(() => {
     const audio = new Audio(
-      loading ? Assets.backgroundAudio.awkwardCricket : Assets.backgroundAudio.evangaylionKazoo,
+      loading ? Assets.backgroundAudio.awkwardCricket : Assets.backgroundAudio.datenKazoo,
     );
     setAudio(audio);
     return () => {
@@ -17,6 +17,7 @@ export default React.memo(({ loading }: { loading: boolean }): React.ReactElemen
   React.useEffect(() => {
     if (audio && !audio.loop) {
       audio.loop = true;
+      audio.volume = 0.1;
       if (isPlaying) audio.play();
     }
   }, [audio]);
@@ -28,13 +29,15 @@ export default React.memo(({ loading }: { loading: boolean }): React.ReactElemen
   React.useEffect(() => {
     const playAndRemoveListener = () => {
       setPlaying(() => true);
-      document.body.removeEventListener("click", playAndRemoveListener);
+      containerRef.current?.removeEventListener("click", playAndRemoveListener);
     };
-    document.body.addEventListener("click", playAndRemoveListener);
-    return () => document.body.removeEventListener("click", playAndRemoveListener);
-  }, []);
+    containerRef?.current?.addEventListener("click", playAndRemoveListener);
+    return () => containerRef.current?.removeEventListener("click", playAndRemoveListener);
+  }, [containerRef.current]);
+  
+
   return (
-    <div className="background-audio" key={`${isPlaying}`}>
+    <div className="background-audio" key={`${isPlaying}`} data-tooltip={isPlaying? "pause" : "play"}>
       <button
         onClick={() => {
           setPlaying((prev) => !prev);

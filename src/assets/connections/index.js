@@ -1,10 +1,11 @@
-import bot from "./bot.png";
-import discord from "./discord.svg";
-import github from "./github.svg";
-import insta from "./insta.png";
-import plugin from "./plugin.png";
-import support from "./support.png";
-import twitch from "./twitch.png";
-import youtube from "./youtube.png";
+import discord from "./discord";
+import github from "./github";
+import insta from "./insta";
+import less from "./less";
+import more from "./more";
+import plugin from "./plugin";
+import support from "./support";
+import twitch from "./twitch";
+import youtube from "./youtube";
 
-export default {bot, discord, github, insta, plugin, support, twitch, youtube};
+export default { discord, github, insta, less, more, plugin, support, twitch, youtube };

@@ -8,4 +8,26 @@
 .connection-icon {
   height: 28px;
   width: auto;
+  opacity: 0;
+  transform: translateX(-20px); 
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.connections.shown .connection-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.show-button {
+  color: #d7bcff;
+  height: 28px;
+  width: auto;
+  opacity: 1;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 1s ease; 
+}
+
+.connections.shown .show-button {
+  transform: rotate(180deg); 
 }

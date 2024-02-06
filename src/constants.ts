@@ -2,7 +2,7 @@ export const API_URL = "api.lanyard.rest";
 
 export const HEARTBEAT_INTERVAL = 30_000;
 
-export const USER_ID = "1025214794766221384";
+export const USER_ID = "1121961711080050780";
 
 export const DATE_OF_BIRTH = {
   date: 25,
@@ -10,6 +10,6 @@ export const DATE_OF_BIRTH = {
   year: 2005,
 };
 
-export const USER = "loneweeb";
+export const USER = "yofukashi.no";
 
 export default { API_URL, HEARTBEAT_INTERVAL, USER_ID, DATE_OF_BIRTH, USER };

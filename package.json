@@ -1,8 +1,8 @@
 {
-  "name": "tharki-god.github.io",
+  "name": "tharkidev.github.io",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://tharki-god.github.io",
+  "homepage": "https://tharkidev.github.io",
   "engines": {
     "node": ">=18.0.0"
   },
