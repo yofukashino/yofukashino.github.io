@@ -71,10 +71,7 @@ a {
 
 
 /* Style for the tooltip container */
-
-
-
-/* Style for the tooltip content */
+/* style */
 [data-tooltip]::after {
   content: attr(data-tooltip);
   position: fixed;
@@ -90,10 +87,13 @@ a {
   transform: translate(-50%, 10px);
 }
 
+/* Style for the tooltip content */
+
+
 /* Show the tooltip on hover */
 [data-tooltip]:hover::after {
   opacity: 1;
   visibility: visible;  
   transform: translate(-10%, 100%);
 }
-
+/* Show the tooltip on hover */

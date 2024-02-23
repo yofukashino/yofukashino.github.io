@@ -18,8 +18,8 @@ export default React.memo(({ age }: ProfileData) => {
             <li>• cultured degenrate weeb</li>
             <li>• indian</li>
             <br />
-            <li>৹ UPI ID for donations: tharki.singh@fam</li>
-            <li>৹ You can donate on my <a data-tooltip="Accepts Paypal and Stripe" href="https://ko-fi.com/tharki"> KO-FI </a> too
+            <li>৹ UPI ID for donations: yofukashi.no.singh@fam</li>
+            <li>৹ You can donate on my <a data-tooltip="Accepts Paypal and Stripe" href="https://ko-fi.com/yofukashino"> KO-FI </a> too
             </li>
           </ul>
         </div>
