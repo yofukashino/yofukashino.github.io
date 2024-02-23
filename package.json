@@ -1,8 +1,8 @@
 {
-  "name": "tharkidev.github.io",
-  "version": "1.0.0",
+  "name": "yofukashino.github.io",
+  "version": "2.0.0",
   "private": true,
-  "homepage": "https://tharkidev.github.io",
+  "homepage": "https:/yofukashino.github.io",
   "engines": {
     "node": ">=18.0.0"
   },
