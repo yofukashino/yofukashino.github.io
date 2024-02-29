@@ -16,13 +16,15 @@ export default React.memo((timestamps: { start: number; end: number }) => {
   }, [start, end]);
   return (
     <div className="timebar-container">
-      <div className="timebar-mainBackground" ><div
-        className="timebar-main"
-        style={{
-          width: "".concat(`${100 * Math.max(Math.min(passedTime / duration, 1), 0)}`, "%"),
-        }}
-      /></div>
-      
+      <div className="timebar-mainBackground">
+        <div
+          className="timebar-main"
+          style={{
+            width: "".concat(`${100 * Math.max(Math.min(passedTime / duration, 1), 0)}`, "%"),
+          }}
+        />
+      </div>
+
       <div className="timebar-timestamps">
         <div className="timebar-passedTime">{Utils.humanReadableTime(passedTime)}</div>
         <div className="timebar-durration">{Utils.humanReadableTime(duration)}</div>

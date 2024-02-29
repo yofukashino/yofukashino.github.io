@@ -89,7 +89,7 @@ export default React.memo(() => {
       const { discord_user, discord_status, activities, spotify } = state! ?? {};
 
       const currentActivity = activities?.find((activity) => activity.type !== 4);
-      console.log(spotify)
+
       const statusActivity = activities?.find((activity) => activity.type === 4);
 
       const currentData: ProfileData = {
@@ -112,7 +112,7 @@ export default React.memo(() => {
           name: currentActivity?.name || "doing yo moma",
           state: currentActivity?.state || "",
           details: currentActivity?.details || "",
-          timestamps: spotify?.timestamps
+          timestamps: spotify?.timestamps,
         },
       };
 

@@ -4,7 +4,8 @@
 }
 
 .timebar-main {
-  background-color: #d7bcff; height: 5px;
+  background-color: #d7bcff;
+  height: 5px;
   border-radius: 50px;
 }
 .timebar-mainBackground {
@@ -14,7 +15,8 @@
 }
 .timebar-timestamps {
   margin-top: 3px;
-  display: flex; flex-direction:row;
+  display: flex;
+  flex-direction: row;
 }
 
 .timebar-passedTime {

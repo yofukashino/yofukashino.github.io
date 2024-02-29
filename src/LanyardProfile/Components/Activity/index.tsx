@@ -32,7 +32,7 @@ export default React.memo(({ activity }: ProfileData) => {
           <div id="activity-detail" className={`${!activity.details ? "hidden" : ""}`}>
             {activity.details}
           </div>
-          {activity?.timestamps && <Timebar {...activity.timestamps}/> } 
+          {activity?.timestamps && <Timebar {...activity.timestamps} />}
         </div>
       </div>
     </div>
