@@ -48,7 +48,9 @@
     flex-direction: column;
     align-items: center;
   }
-
+  .user-info {
+    text-align: center;
+  }
   #username {
     font-size: 22px;
     text-align: center;

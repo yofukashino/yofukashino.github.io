@@ -13,5 +13,6 @@ export default interface ProfileData {
     name?: string;
     state?: string;
     details?: string;
+    timestamps?: { start: number; end: number };
   };
 }

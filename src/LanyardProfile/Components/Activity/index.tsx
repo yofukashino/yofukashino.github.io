@@ -1,5 +1,6 @@
 import React from "react";
 import Constants from "../../../constants";
+import Timebar from "../Timebar.tsx";
 import { ProfileData } from "../../Types";
 import "./Activity.css";
 export default React.memo(({ activity }: ProfileData) => {
@@ -31,6 +32,7 @@ export default React.memo(({ activity }: ProfileData) => {
           <div id="activity-detail" className={`${!activity.details ? "hidden" : ""}`}>
             {activity.details}
           </div>
+          {activity?.timestamps && <Timebar {...activity.timestamps}/> } 
         </div>
       </div>
     </div>

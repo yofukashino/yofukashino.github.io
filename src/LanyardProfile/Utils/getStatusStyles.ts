@@ -1,4 +1,4 @@
-export const getStatusStyles = (
+export default (
   discordStatus: string,
 ): {
   background?: string;
