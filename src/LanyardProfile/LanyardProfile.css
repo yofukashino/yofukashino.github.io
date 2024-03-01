@@ -7,12 +7,12 @@
   width: 100%;
   height: 100vh;
   overflow: auto;
-  flex-grow: 50px;
   gap: 10px;
   background: url(../assets/background.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  flex-flow: wrap;
 }
 .wrapper::before {
   content: '';
@@ -23,7 +23,6 @@
   bottom: 0;
   left: 0;
   height: 100vh;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.85); /* Adjust the alpha value to control the darkness */
 }
 .card {
