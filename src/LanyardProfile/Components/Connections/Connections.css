@@ -31,3 +31,13 @@
 .connections.shown .show-button {
   transform: rotate(180deg); 
 }
+
+
+
+/* media queries */
+@media (max-width: 768px) {
+  .connections {
+    justify-content: center;
+  }
+}
+/* media queries */
