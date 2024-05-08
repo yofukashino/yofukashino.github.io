@@ -10,6 +10,6 @@ export const DATE_OF_BIRTH = {
   year: 2005,
 };
 
-export const USER = "yofukashi.no";
+export const USER = "yofukashino_";
 
 export default { API_URL, HEARTBEAT_INTERVAL, USER_ID, DATE_OF_BIRTH, USER };
