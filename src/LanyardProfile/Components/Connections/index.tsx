@@ -5,7 +5,7 @@ export default React.memo(() => {
   const [shown, setShown] = React.useState(false);
   return (
     <div className={`connections${shown ? " shown" : ""}`}>
-      <span 
+      <span
         data-tooltip={shown ? "hide connections" : "show connections"}
         onClick={() => setShown((prev) => !prev)}>
         {shown ? (
@@ -38,8 +38,7 @@ export default React.memo(() => {
             <Assets.connections.twitch className="connection-icon" />
           </a>
         </>
-      ) 
-      }
+      )}
     </div>
   );
 });

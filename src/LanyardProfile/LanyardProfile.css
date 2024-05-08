@@ -14,7 +14,7 @@
   background-size: cover;
 }
 .wrapper::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -72,13 +72,12 @@ a {
 }
 @media (max-height: 1768px) {
   /* container */
-  .wrapper  {
+  .wrapper {
     justify-content: center !important;
   }
   /* container */
 }
 /* media queries */
-
 
 /* Style for the tooltip container */
 /* Style */
@@ -101,11 +100,9 @@ a {
 /* Show the tooltip on hover */
 [data-tooltip]:hover::after {
   opacity: 1;
-  visibility: visible;  
+  visibility: visible;
   transform: translate(-10%, 100%);
 }
 /* Show the tooltip on hover */
 
 /* Style for the tooltip content */
-
-
