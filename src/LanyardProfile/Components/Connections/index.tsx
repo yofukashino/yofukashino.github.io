@@ -19,7 +19,7 @@ export default React.memo(() => {
           <a data-tooltip="github" href="https://github.com/yofukashino">
             <Assets.connections.github className="connection-icon" />
           </a>
-          <a data-tooltip="loneweeb" href="https://discord.com/users/1121961711080050780/">
+          <a data-tooltip="yofukashino_" href="https://discord.com/users/1121961711080050780/">
             <Assets.connections.discord className="connection-icon" />
           </a>
           <a data-tooltip="support server" href="https://discord.com/invite/SgKSKyh9gY">
@@ -28,13 +28,13 @@ export default React.memo(() => {
           <a data-tooltip="rp plugins" href="https://github.com/yofukashino/RepluggedPlugins">
             <Assets.connections.plugin className="connection-icon" />
           </a>
-          <a data-tooltip="instagram" href="https://www.instagram.com/yofukashino/">
+          <a data-tooltip="instagram" href="https://www.instagram.com/yofukashino_/">
             <Assets.connections.insta className="connection-icon" />
           </a>
-          <a data-tooltip="youtube" href="https://www.youtube.com/channel/UCYQnV4Z-TOVuyBVWjkBKZtg">
+          <a data-tooltip="youtube" href="https://www.youtube.com/@yofukashino_">
             <Assets.connections.youtube className="connection-icon" />
           </a>
-          <a data-tooltip="twitch" href="https://www.twitch.tv/yofukashi_no">
+          <a data-tooltip="twitch" href="https://www.twitch.tv/yofukashino_">
             <Assets.connections.twitch className="connection-icon" />
           </a>
         </>
