@@ -12,10 +12,8 @@ export default React.memo(({ age }: ProfileData) => {
         <header className="heading">about me</header>
         <div className="bio">
           <ul>
-            <li>• {age} years old</li>
-            <li>• straight male</li>
-            <li>• looking for love of life</li>
-            <li>• cultured degenrate weeb</li>
+            <li>• currently {age}</li>
+            <li>• reincarnation of degenracy</li>
             <li>• indian</li>
             <br />
             <li>৹ UPI ID for donations: yofukashi.no.singh@fam</li>
