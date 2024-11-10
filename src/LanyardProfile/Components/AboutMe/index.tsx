@@ -16,7 +16,7 @@ export default React.memo(({ age }: ProfileData) => {
             <li>• reincarnation of degenracy</li>
             <li>• indian</li>
             <br />
-            <li>৹ UPI ID for donations: yofukashi.no.singh@fam</li>
+            <li>৹ UPI ID for donations: yofukashinooo@oksbi</li>
             <li>
               ৹ You can donate on my{" "}
               <a data-tooltip="Accepts Paypal and Stripe" href="https://ko-fi.com/yofukashino">
