@@ -18,10 +18,10 @@ export default React.memo(({ age }: ProfileData) => {
             <br />
             <li>৹ UPI ID for donations: yofukashinooo@oksbi</li>
             <li>
-              ৹ You can donate on my{" "}
-              <a data-tooltip="Accepts Paypal and Stripe" href="https://ko-fi.com/yofukashino">
+              ৹ To support me you can follow my {" "}
+              <a data-tooltip="11:00 PM IST" href="https://www.twitch.tv/yofukashino_">
                 {" "}
-                KO-FI{" "}
+                Twitch{" "}
               </a>{" "}
               too
             </li>
